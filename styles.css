@@ -374,3 +374,20 @@ used for profile image
     border-radius: 50% / 60%;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12);
 }
+
+.top-nav {
+  max-width: 960px;
+  margin: 0 auto 20px auto;
+  padding: 0 10px;
+}
+
+.top-nav a {
+  margin-right: 25px;
+  font-weight: 500;
+  color: #545E6C;
+  text-decoration: none;
+}
+
+.top-nav a:hover {
+  text-decoration: underline;
+}

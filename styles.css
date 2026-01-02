@@ -366,9 +366,11 @@ used for profile image
 */
 
 .profile-img {
-    width: 220px;
-    height: 300px;
+    width: 240px;
+    height: 320px;
     object-fit: cover;
+    margin-bottom: 20px;
+    border: none;                 
     border-radius: 50% / 60%;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15); 
 }

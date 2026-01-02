@@ -370,7 +370,6 @@ used for profile image
     height: 300px;
     object-fit: cover;
     margin-bottom: 20px;
-    border: 6px solid #f1f1f1;
     border-radius: 50% / 60%;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
 }

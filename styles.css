@@ -433,3 +433,65 @@ used for profile image
     border-radius: 12px;
   }
 }
+
+/* ===== Make sidebar more compact (shorter) ===== */
+
+/* کمتر کردن فاصله کلی داخل سایدبار */
+.sidebar-wrapper .container-block{
+  padding: 18px 20px;   /* قبلاً 30px */
+}
+
+/* بخش پروفایل (بالا) کوتاه‌تر */
+.sidebar-wrapper .profile-container{
+  padding: 18px 18px 14px;  /* قبلاً 30px */
+}
+
+/* عکس کوچک‌تر */
+.profile-img{
+  max-width: 140px;    /* قبلاً 100 یا بزرگ‌تر */
+  margin-bottom: 10px; /* قبلاً 15px */
+}
+
+/* اسم و عنوان کوچکتر + فاصله کمتر */
+.sidebar-wrapper .name{
+  font-size: 26px;     /* قبلاً 32px */
+  margin-bottom: 6px;
+}
+
+.sidebar-wrapper .tagline{
+  font-size: 14px;     /* قبلاً 16px */
+  line-height: 1.3;
+}
+
+/* فاصله آیتم‌های تماس کمتر */
+.sidebar-wrapper .contact-list li{
+  margin-bottom: 10px; /* قبلاً 15px */
+}
+
+.sidebar-wrapper .contact-list .fa{
+  font-size: 16px;     /* قبلاً 18px */
+}
+
+/* تیترهای داخل سایدبار جمع‌وجورتر */
+.sidebar-wrapper .container-block-title{
+  font-size: 14px;     /* قبلاً 16px */
+  margin-bottom: 10px;
+}
+
+/* آیتم‌های Education و Languages کمتر فاصله داشته باشند */
+.sidebar-wrapper .education-container .item{
+  margin-bottom: 10px; /* قبلاً 15px */
+}
+
+.sidebar-wrapper .languages-list li,
+.sidebar-wrapper .interests-list li{
+  margin-bottom: 6px;  /* قبلاً 10px */
+}
+
+/* متن‌های متا کمی کوچکتر */
+.sidebar-wrapper .education-container .meta,
+.sidebar-wrapper .education-container .time,
+.sidebar-wrapper .languages-container .lang-desc{
+  font-size: 13px;
+}
+

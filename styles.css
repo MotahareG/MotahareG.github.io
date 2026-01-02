@@ -74,7 +74,7 @@ p {
   right: 0;
   top: 0;
   width: var(--sidebar-width);
-  height: 100vh;
+  height: auto;
   overflow-y: auto;
   color: #fff;
 }

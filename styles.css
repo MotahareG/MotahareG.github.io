@@ -478,20 +478,62 @@ used for profile image
   margin-bottom: 10px;
 }
 
-/* آیتم‌های Education و Languages کمتر فاصله داشته باشند */
 .sidebar-wrapper .education-container .item{
-  margin-bottom: 10px; /* قبلاً 15px */
+  margin-bottom: 10px; 
 }
 
 .sidebar-wrapper .languages-list li,
 .sidebar-wrapper .interests-list li{
-  margin-bottom: 6px;  /* قبلاً 10px */
+  margin-bottom: 6px;  
 }
 
-/* متن‌های متا کمی کوچکتر */
+
 .sidebar-wrapper .education-container .meta,
 .sidebar-wrapper .education-container .time,
 .sidebar-wrapper .languages-container .lang-desc{
   font-size: 13px;
 }
 
+/* ===== FIX: remove extra green strip on the right (no sticky/fixed) ===== */
+
+/* 1) layout: put sidebar and main in a normal flow */
+.wrapper{
+  display: flex;
+  flex-direction: row-reverse; /* sidebar stays on the right */
+  align-items: flex-start;
+  background: #fff;            /* مهم: پشت صفحه سفید */
+}
+
+/* 2) sidebar: NOT absolute, height based on content */
+.sidebar-wrapper{
+  position: relative !important;
+  right: auto !important;
+  top: auto !important;
+
+  height: auto !important;
+  min-height: 0 !important;
+
+  width: 320px;        /* اینجا پهنا را تنظیم کن */
+  flex: 0 0 320px;
+  background: #4CAC9D; /* رنگ سبز فقط برای خود سایدبار */
+}
+
+/* 3) main: remove the artificial right padding that was reserving space */
+.main-wrapper{
+  flex: 1 1 auto;
+  padding-right: 60px !important; /* قبلاً 300px بود */
+}
+
+/* 4) mobile: stack them */
+@media (max-width: 767px){
+  .wrapper{
+    display: block;
+  }
+  .sidebar-wrapper{
+    width: 100% !important;
+    flex: none;
+  }
+  .main-wrapper{
+    padding-right: 30px !important;
+  }
+}

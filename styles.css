@@ -1,539 +1,256 @@
-/*   
- * Template Name: Orbit - Responsive Resume/CV Template for Developers
- * Version: 1.0
- * Author: Xiaoying Riley
- * Twitter: @3rdwave_themes
- * License: Creative Commons Attribution 3.0 License
- * Website: http://themes.3rdwavemedia.com/
-*/
+/* Orbit - Responsive Resume/CV Template (customized) */
 
+/* ===== Base ===== */
+:root { --sidebar-width: 320px; }
 
-/* styles-2.css */
-
-
-/* ======= Base ======= */
-
-body {
-    font-family: 'Roboto', sans-serif;
-    color: #545E6C;
-    background: #f5f5f5;
-    font-size: 14px;
-    padding: 30px;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+body{
+  font-family:'Roboto',sans-serif;
+  color:#545E6C;
+  background:#f5f5f5;
+  font-size:14px;
+  padding:30px;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-weight: 700;
-}
+h1,h2,h3,h4,h5,h6{ font-weight:700; }
 
-a {
-    color: #35776d;
-    -webkit-transition: all 0.4s ease-in-out;
-    -moz-transition: all 0.4s ease-in-out;
-    -ms-transition: all 0.4s ease-in-out;
-    -o-transition: all 0.4s ease-in-out;
+a{
+  color:#35776d;
+  transition:all .4s ease-in-out;
 }
+a:hover{ text-decoration:underline; color:#1d423c; }
+a:focus{ text-decoration:none; }
 
-a:hover {
-    text-decoration: underline;
-    color: #1d423c;
-}
+p{ line-height:1.5; }
 
-a:focus {
-    text-decoration: none;
-}
-
-p {
-    line-height: 1.5;
-}
-
-.wrapper {
-    background: #4CAC9D;
-    max-width: 960px;
-    margin: 0 auto;
-    position: relative;
-    min-height: 100vh;
-    -webkit-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-    -moz-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-:root{
-  --sidebar-width: 320px;   /* اگر خواستی بیشتر/کمترش کن */
+/* ===== Layout ===== */
+.wrapper{
+  max-width:960px;
+  margin:0 auto;
+  min-height:100vh;
+  background:#fff;
+  position:relative;
+  display:flex;
+  flex-direction:row-reverse; /* sidebar on the right */
+  align-items:flex-start;
+  box-shadow:0 2px 4px rgba(0,0,0,.1);
 }
 
 .sidebar-wrapper{
-  background: #4CAC9D;
-  position: fixed;
-  right: 0;
-  top: 0;
-  width: var(--sidebar-width);
-  height: auto;
-  overflow-y: auto;
-  color: #fff;
-}
-
-.sidebar-wrapper a {
-    color: #fff;
-}
-
-.sidebar-wrapper .profile-container {
-    padding: 30px;
-    background: rgba(0, 0, 0, 0.2);
-    text-align: center;
-    color: #fff;
-}
-
-.sidebar-wrapper .name {
-    font-size: 32px;
-    font-weight: 900;
-    margin-top: 0;
-    margin-bottom: 10px;
-}
-
-.sidebar-wrapper .tagline {
-    color: rgba(255, 255, 255, 0.6);
-    font-size: 16px;
-    font-weight: 400;
-    margin-top: 0;
-    margin-bottom: 0;
-}
-
-.sidebar-wrapper .profile {
-    margin-bottom: 15px;
-}
-
-.sidebar-wrapper .contact-list .fa {
-    margin-right: 5px;
-    font-size: 18px;
-    vertical-align: middle;
-}
-
-.sidebar-wrapper .contact-list li {
-    margin-bottom: 15px;
-}
-
-.sidebar-wrapper .contact-list li:last-child {
-    margin-bottom: 0;
-}
-
-.sidebar-wrapper .contact-list .email .fa {
-    font-size: 14px;
-}
-
-.sidebar-wrapper .container-block {
-    padding: 30px;
-}
-
-.sidebar-wrapper .container-block-title {
-    text-transform: uppercase;
-    font-size: 16px;
-    font-weight: 700;
-    margin-top: 0;
-    margin-bottom: 15px;
-}
-
-.sidebar-wrapper .degree {
-    font-size: 14px;
-    margin-top: 0;
-    margin-bottom: 5px;
-}
-
-.sidebar-wrapper .education-container .item {
-    margin-bottom: 15px;
-}
-
-.sidebar-wrapper .education-container .item:last-child {
-    margin-bottom: 0;
-}
-
-.sidebar-wrapper .education-container .meta {
-    color: rgba(255, 255, 255, 0.6);
-    font-weight: 500;
-    margin-bottom: 0px;
-    margin-top: 0;
-}
-
-.sidebar-wrapper .education-container .time {
-    color: rgba(255, 255, 255, 0.6);
-    font-weight: 500;
-    margin-bottom: 0px;
-}
-
-.sidebar-wrapper .languages-container .lang-desc {
-    color: rgba(255, 255, 255, 0.6);
-}
-
-.sidebar-wrapper .languages-list {
-    margin-bottom: 0;
-}
-
-.sidebar-wrapper .languages-list li {
-    margin-bottom: 10px;
-}
-
-.sidebar-wrapper .languages-list li:last-child {
-    margin-bottom: 0;
-}
-
-.sidebar-wrapper .interests-list {
-    margin-bottom: 0;
-}
-
-.sidebar-wrapper .interests-list li {
-    margin-bottom: 10px;
-}
-
-.sidebar-wrapper .interests-list li:last-child {
-    margin-bottom: 0;
+  width:var(--sidebar-width);
+  flex:0 0 var(--sidebar-width);
+  background:#4CAC9D;
+  color:#fff;
 }
 
 .main-wrapper{
-  background: #fff;
-  padding: 60px;
-  padding-right: calc(var(--sidebar-width) + 60px);
+  flex:1 1 auto;
+  background:#fff;
+  padding:60px;
+  padding-right:60px;
 }
 
+/* ===== Sidebar ===== */
+.sidebar-wrapper a{ color:#fff; }
 
-.main-wrapper .section-title {
-    text-transform: uppercase;
-    font-size: 20px;
-    font-weight: 500;
-    color: #35776d;
-    position: relative;
-    margin-top: 0;
-    margin-bottom: 20px;
-}
-
-.main-wrapper .section-title .fa {
-    width: 30px;
-    height: 30px;
-    margin-right: 8px;
-    display: inline-block;
-    color: #fff;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    -o-border-radius: 50%;
-    border-radius: 50%;
-    -moz-background-clip: padding;
-    -webkit-background-clip: padding-box;
-    background-clip: padding-box;
-    background: #35776d;
-    text-align: center;
-    padding-top: 8px;
-    font-size: 16px;
-    position: relative;
-    top: -2px;
-}
-
-.main-wrapper .section {
-    margin-bottom: 60px;
-}
-
-.main-wrapper .experiences-section .item {
-    margin-bottom: 30px;
-}
-
-.main-wrapper .upper-row {
-    position: relative;
-    overflow: hidden;
-    margin-bottom: 2px;
-}
-
-.main-wrapper .job-title {
-    color: #3F4650;
-    font-size: 16px;
-    margin-top: 0;
-    margin-bottom: 0;
-    font-weight: 500;
-}
-
-.main-wrapper .time {
-    position: absolute;
-    right: 0;
-    top: 0;
-    color: #97AAC3;
-}
-
-.main-wrapper .company {
-    margin-bottom: 10px;
-    color: #97AAC3;
-}
-
-.main-wrapper .project-title {
-    font-size: 16px;
-    font-weight: 400;
-    margin-top: 0;
-    margin-bottom: 5px;
-}
-
-.main-wrapper .projects-section .intro {
-    margin-bottom: 30px;
-}
-
-.main-wrapper .projects-section .item {
-    margin-bottom: 15px;
-}
-
-.skillset .item {
-    margin-bottom: 15px;
-    overflow: hidden;
-}
-
-.skillset .level-title {
-    font-size: 14px;
-    margin-top: 0;
-    margin-bottom: 12px;
-}
-
-.skillset .level-bar {
-    height: 12px;
-    background: #f5f5f5;
-}
-
-.skillset .level-bar-inner {
-    height: 12px;
-    background: #7ec6bb;
-}
-
-.footer {
-    padding: 30px;
-    padding-top: 60px;
-}
-
-.footer .copyright {
-    line-height: 1.6;
-    color: #545E6C;
-    font-size: 13px;
-}
-
-.footer .fa-heart {
-    color: #fb866a;
-}
-
-
-/* Extra small devices (phones, less than 768px) */
-
-@media (max-width: 767px) {
-    .sidebar-wrapper {
-        position: static;
-        width: 100%;
-        height: auto;
-        overflow: visible;
-    }
-    .main-wrapper {
-        padding: 30px;
-        padding-right: 30px;
-    }
-    .main-wrapper .time {
-        position: static;
-        display: block;
-        margin-top: 5px;
-    }
-    .main-wrapper .upper-row {
-        margin-bottom: 0;
-    }
-}
-
-
-/* Small devices (tablets, 768px and up) */
-
-
-/* Medium devices (desktops, 992px and up) */
-
-@media (min-width: 992px) {
-    .skillset .level-title {
-        display: inline-block;
-        float: left;
-        width: 30%;
-        margin-bottom: 0;
-    }
-    .skillset .level-bar {
-        display: inline-block;
-        width: 70%;
-        float: left;
-        position: relative;
-        top: 1px;
-    }
-}
-
-
-/* Large devices (large desktops, 1200px and up) */
-
-
-/* Ex-Large devices (large desktops, 1200px and up) */
-
-
-/* 
-used for profile image
-*/
-
-.profile-img {
-    width: 200px;
-    height: 270px;
-    object-fit: cover;
-    margin-bottom: 18px;
-    border: none;
-    border-radius: 50% / 60%;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12);
-}
-
-/* ===== Top Navigation (Home / CV) ===== */
-.top-nav{
-  max-width: 960px;
-  margin: 0 auto 18px auto;
-  padding: 10px 14px;
-  background: rgba(255,255,255,0.75);
-  border: 1px solid rgba(0,0,0,0.06);
-  border-radius: 14px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
-  display: flex;
-  gap: 10px;
-  align-items: center;
-}
-
-/* links */
-.top-nav a{
-  display: inline-flex;
-  align-items: center;
-  padding: 8px 12px;
-  border-radius: 10px;
-  font-weight: 600;
-  font-size: 14px;
-  color: #2f3b4a;
-  text-decoration: none;
-  transition: all 0.2s ease;
-}
-
-
-.top-nav a:hover{
-  background: rgba(76,172,157,0.12);   
-  color: #1d423c;
-  transform: translateY(-1px);
-}
-
-
-.top-nav a.active{
-  background: #35776d;
-  color: #fff;
-  box-shadow: 0 6px 14px rgba(53,119,109,0.28);
-}
-
-
-@media (max-width: 767px){
-  .top-nav{
-    margin: 0 0 14px 0;
-    border-radius: 12px;
-  }
-}
-
-/* ===== Make sidebar more compact (shorter) ===== */
-
-/* کمتر کردن فاصله کلی داخل سایدبار */
-.sidebar-wrapper .container-block{
-  padding: 18px 20px;   /* قبلاً 30px */
-}
-
-/* بخش پروفایل (بالا) کوتاه‌تر */
 .sidebar-wrapper .profile-container{
-  padding: 18px 18px 14px;  /* قبلاً 30px */
+  padding:18px 18px 14px;
+  background:rgba(0,0,0,.2);
+  text-align:center;
 }
 
-/* عکس کوچک‌تر */
-.profile-img{
-  max-width: 140px;    /* قبلاً 100 یا بزرگ‌تر */
-  margin-bottom: 10px; /* قبلاً 15px */
-}
-
-/* اسم و عنوان کوچکتر + فاصله کمتر */
 .sidebar-wrapper .name{
-  font-size: 26px;     /* قبلاً 32px */
-  margin-bottom: 6px;
+  font-size:26px;
+  font-weight:900;
+  margin:0 0 6px 0;
 }
 
 .sidebar-wrapper .tagline{
-  font-size: 14px;     /* قبلاً 16px */
-  line-height: 1.3;
+  color:rgba(255,255,255,.6);
+  font-size:14px;
+  font-weight:400;
+  margin:0;
+  line-height:1.3;
 }
 
-/* فاصله آیتم‌های تماس کمتر */
-.sidebar-wrapper .contact-list li{
-  margin-bottom: 10px; /* قبلاً 15px */
-}
+.sidebar-wrapper .container-block{ padding:18px 20px; }
 
-.sidebar-wrapper .contact-list .fa{
-  font-size: 16px;     /* قبلاً 18px */
-}
-
-/* تیترهای داخل سایدبار جمع‌وجورتر */
 .sidebar-wrapper .container-block-title{
-  font-size: 14px;     /* قبلاً 16px */
-  margin-bottom: 10px;
+  text-transform:uppercase;
+  font-size:14px;
+  font-weight:700;
+  margin:0 0 10px 0;
 }
 
-.sidebar-wrapper .education-container .item{
-  margin-bottom: 10px; 
-}
+.sidebar-wrapper .degree{ font-size:14px; margin:0 0 5px 0; }
 
-.sidebar-wrapper .languages-list li,
-.sidebar-wrapper .interests-list li{
-  margin-bottom: 6px;  
-}
-
+.sidebar-wrapper .education-container .item{ margin-bottom:10px; }
+.sidebar-wrapper .education-container .item:last-child{ margin-bottom:0; }
 
 .sidebar-wrapper .education-container .meta,
 .sidebar-wrapper .education-container .time,
 .sidebar-wrapper .languages-container .lang-desc{
-  font-size: 13px;
+  color:rgba(255,255,255,.6);
+  font-weight:500;
+  margin:0;
+  font-size:13px;
 }
 
-/* ===== FIX: remove extra green strip on the right (no sticky/fixed) ===== */
+.sidebar-wrapper .languages-list,
+.sidebar-wrapper .interests-list{ margin-bottom:0; }
 
-/* 1) layout: put sidebar and main in a normal flow */
-.wrapper{
-  display: flex;
-  flex-direction: row-reverse; /* sidebar stays on the right */
-  align-items: flex-start;
-  background: #fff;            /* مهم: پشت صفحه سفید */
+.sidebar-wrapper .languages-list li,
+.sidebar-wrapper .interests-list li{ margin-bottom:6px; }
+.sidebar-wrapper .languages-list li:last-child,
+.sidebar-wrapper .interests-list li:last-child{ margin-bottom:0; }
+
+.sidebar-wrapper .contact-list .fa{
+  margin-right:5px;
+  font-size:16px;
+  vertical-align:middle;
+}
+.sidebar-wrapper .contact-list li{ margin-bottom:10px; }
+.sidebar-wrapper .contact-list li:last-child{ margin-bottom:0; }
+.sidebar-wrapper .contact-list .email .fa{ font-size:14px; }
+
+/* Profile image (no white border) */
+.profile-img{
+  width:140px;
+  height:190px;
+  object-fit:cover;
+  margin-bottom:10px;
+  border:none;
+  border-radius:50% / 60%;
+  box-shadow:0 2px 4px rgba(0,0,0,.12);
 }
 
-/* 2) sidebar: NOT absolute, height based on content */
-.sidebar-wrapper{
-  position: relative !important;
-  right: auto !important;
-  top: auto !important;
-
-  height: auto !important;
-  min-height: 0 !important;
-
-  width: 320px;        /* اینجا پهنا را تنظیم کن */
-  flex: 0 0 320px;
-  background: #4CAC9D; /* رنگ سبز فقط برای خود سایدبار */
+/* ===== Main content ===== */
+.main-wrapper .section-title{
+  text-transform:uppercase;
+  font-size:20px;
+  font-weight:500;
+  color:#35776d;
+  margin:0 0 20px 0;
+  position:relative;
 }
 
-/* 3) main: remove the artificial right padding that was reserving space */
-.main-wrapper{
-  flex: 1 1 auto;
-  padding-right: 60px !important; /* قبلاً 300px بود */
+.main-wrapper .section-title .fa{
+  width:30px; height:30px;
+  margin-right:8px;
+  display:inline-block;
+  color:#fff;
+  border-radius:50%;
+  background:#35776d;
+  text-align:center;
+  padding-top:8px;
+  font-size:16px;
+  position:relative;
+  top:-2px;
 }
 
-/* 4) mobile: stack them */
+.main-wrapper .section{ margin-bottom:60px; }
+.main-wrapper .experiences-section .item{ margin-bottom:30px; }
+
+.main-wrapper .upper-row{
+  position:relative;
+  overflow:hidden;
+  margin-bottom:2px;
+}
+
+.main-wrapper .job-title{
+  color:#3F4650;
+  font-size:16px;
+  margin:0;
+  font-weight:500;
+}
+
+.main-wrapper .time{
+  position:absolute;
+  right:0;
+  top:0;
+  color:#97AAC3;
+}
+
+.main-wrapper .company{ margin-bottom:10px; color:#97AAC3; }
+
+.main-wrapper .project-title{
+  font-size:16px;
+  font-weight:400;
+  margin:0 0 5px 0;
+}
+
+.main-wrapper .projects-section .intro{ margin-bottom:30px; }
+.main-wrapper .projects-section .item{ margin-bottom:15px; }
+
+/* ===== Skills ===== */
+.skillset .item{ margin-bottom:15px; overflow:hidden; }
+.skillset .level-title{ font-size:14px; margin:0 0 12px 0; }
+.skillset .level-bar{ height:12px; background:#f5f5f5; }
+.skillset .level-bar-inner{ height:12px; background:#7ec6bb; }
+
+@media (min-width: 992px){
+  .skillset .level-title{ float:left; width:30%; margin-bottom:0; }
+  .skillset .level-bar{ float:left; width:70%; position:relative; top:1px; }
+}
+
+/* ===== Footer ===== */
+.footer{ padding:30px; padding-top:60px; }
+.footer .copyright{
+  line-height:1.6;
+  color:#545E6C;
+  font-size:13px;
+}
+.footer .fa-heart{ color:#fb866a; }
+
+/* ===== Top Navigation (Home / CV) ===== */
+.top-nav{
+  max-width:960px;
+  margin:0 auto 18px auto;
+  padding:10px 14px;
+  background:rgba(255,255,255,.75);
+  border:1px solid rgba(0,0,0,.06);
+  border-radius:14px;
+  box-shadow:0 6px 18px rgba(0,0,0,.06);
+  display:flex;
+  gap:10px;
+  align-items:center;
+}
+
+.top-nav a{
+  display:inline-flex;
+  align-items:center;
+  padding:8px 12px;
+  border-radius:10px;
+  font-weight:600;
+  font-size:14px;
+  color:#2f3b4a;
+  text-decoration:none;
+  transition:all .2s ease;
+}
+
+.top-nav a:hover{
+  background:rgba(76,172,157,.12);
+  color:#1d423c;
+  transform:translateY(-1px);
+}
+
+.top-nav a.active{
+  background:#35776d;
+  color:#fff;
+  box-shadow:0 6px 14px rgba(53,119,109,.28);
+}
+
+/* ===== Mobile ===== */
 @media (max-width: 767px){
-  .wrapper{
-    display: block;
+  .wrapper{ display:block; }
+  .sidebar-wrapper{ width:100%; flex:none; }
+  .main-wrapper{ padding:30px; padding-right:30px; }
+  .main-wrapper .time{
+    position:static;
+    display:block;
+    margin-top:5px;
   }
-  .sidebar-wrapper{
-    width: 100% !important;
-    flex: none;
-  }
-  .main-wrapper{
-    padding-right: 30px !important;
-  }
+  .main-wrapper .upper-row{ margin-bottom:0; }
+  .top-nav{ margin:0 0 14px 0; border-radius:12px; }
 }

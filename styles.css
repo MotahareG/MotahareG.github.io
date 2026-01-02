@@ -58,6 +58,7 @@ p {
     max-width: 960px;
     margin: 0 auto;
     position: relative;
+    min-height: 100vh;
     -webkit-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
     -moz-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
@@ -323,10 +324,13 @@ p {
 @media (max-width: 767px) {
     .sidebar-wrapper {
         position: static;
-        width: inherit;
+        width: 100%;
+        height: auto;
+        overflow: visible;
     }
     .main-wrapper {
         padding: 30px;
+        padding-right: 30px;
     }
     .main-wrapper .time {
         position: static;

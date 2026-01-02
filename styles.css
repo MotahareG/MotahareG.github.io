@@ -375,19 +375,51 @@ used for profile image
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12);
 }
 
-.top-nav {
+/* ===== Top Navigation (Home / CV) ===== */
+.top-nav{
   max-width: 960px;
-  margin: 0 auto 20px auto;
-  padding: 0 10px;
+  margin: 0 auto 18px auto;
+  padding: 10px 14px;
+  background: rgba(255,255,255,0.75);
+  border: 1px solid rgba(0,0,0,0.06);
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  display: flex;
+  gap: 10px;
+  align-items: center;
 }
 
-.top-nav a {
-  margin-right: 25px;
-  font-weight: 500;
-  color: #545E6C;
+/* links */
+.top-nav a{
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 12px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 14px;
+  color: #2f3b4a;
   text-decoration: none;
+  transition: all 0.2s ease;
 }
 
-.top-nav a:hover {
-  text-decoration: underline;
+
+.top-nav a:hover{
+  background: rgba(76,172,157,0.12);   
+  color: #1d423c;
+  transform: translateY(-1px);
+}
+
+
+.top-nav a.active{
+  background: #35776d;
+  color: #fff;
+  box-shadow: 0 6px 14px rgba(53,119,109,0.28);
+}
+
+
+@media (max-width: 767px){
+  .top-nav{
+    margin: 0 0 14px 0;
+    border-radius: 12px;
+  }
 }
